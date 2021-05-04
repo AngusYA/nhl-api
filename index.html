@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Angus Yeh | A01131681 -->
+
+	<meta charset="UTF-8">
+    <title>NHL API</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body onload="freshLoad()">
+    <div id="spinner"></div>
+    <div id="overlay-box-container">
+        <div class="overlay-box">
+            <div class="close-box">X</div>
+        </div>
+    </div>
+	<h1>Active NHL Teams</h1>
+    <p>Sort By</p>
+    <select id="select-box" onchange="sortTeams()">
+        <option value="id">Oldest to Newest</option>
+        <option value="id&dir=DESC">Newest to Oldest</option>
+        <option value="teamPlaceName">Place Name (A-Z)</option>
+        <option value="teamCommonName">Common Name (A-Z)</option>
+    </select>
+    <div id="outer-container">
+        <div id="my-container"></div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
